@@ -15,7 +15,8 @@ server.use('/api/auth', authRouter);
 server.use('/api/users', usersRouter);
 
 server.get('/', (req, res) => {
-    res.send('Welcome to the users API')
+    res.status(200)
+        .json({ message: 'Welcome to the users API' })
 });
 
 module.exports = server;
